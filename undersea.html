@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
 
-
+    <p id="valueOfN"></p>
 
     <title>NitroDash</title>
 <link rel="icon" href="icon.png">
@@ -246,6 +246,8 @@
   </head>
 
   <body translate="no">
+
+    <p id="valueOfN"></p>
     <div id="game">
       <div id="road">
         <div id="cloud"></div>
@@ -262,6 +264,7 @@
       <div id="home">
         <h1>Nitro Dash</h1>
         <p id="text"></p>
+        <p id="valueOfN"></p>
 
         <div id="highscore"></div>
       </div>
@@ -283,6 +286,14 @@
       <option value="bgmusic/Mermaid.mp3">Mermaid</option>
       <!-- Add more songs as needed -->
     </select>
+
+    <select id="diffMenu">
+      
+      <option value="normal">Normal</option>
+      <option value="hard">Hard</option>
+      <!-- Add more songs as needed -->
+  </select>
+
     
     <audio autoplay  id="myAudio">
       <source id="audioSource" src="bgmusic/Farewell.mp3" type="audio/mp3">
@@ -616,14 +627,18 @@
       const segL = 200;
       const camD = 0.2;
       const H = 1500;
-      const N = 70;
+      var N = 70;
+      
+
+      
+
 
       const maxSpeed = 200;
       const accel = 38;
       const breaking = -80;
       const decel = -40;
       const maxOffSpeed = 40;
-      const offDecel = -70;
+      const offDecel = -N;
       const enemy_speed = 8;
       const hitSpeed = 20;
 
@@ -1055,13 +1070,14 @@
           audio.load(ASSETS.AUDIO[key], key, (_) => 0)
         );
 
+        
         cars.push(new Car(0, ASSETS.IMAGE.CAR, LANE.C));
         cars.push(new Car(10, ASSETS.IMAGE.CAR, LANE.B));
         cars.push(new Car(20, ASSETS.IMAGE.CAR, LANE.C));
         cars.push(new Car(35, ASSETS.IMAGE.CAR, LANE.C));
         cars.push(new Car(50, ASSETS.IMAGE.CAR, LANE.A));
         cars.push(new Car(60, ASSETS.IMAGE.CAR, LANE.B));
-        cars.push(new Car(70, ASSETS.IMAGE.CAR, LANE.A));
+        cars.push(new Car(N, ASSETS.IMAGE.CAR, LANE.A));
 
         for (let i = 0; i < N; i++) {
           var line = new Line();
@@ -1098,7 +1114,56 @@
         })();
       }
 
+
+      // var songMenu = document.getElementById('diffMenu');
+
+      //   // Add an event listener to the select element
+      //   songMenu.addEventListener('change', function() {
+      //       // Get the selected option
+      //       var selectedOption = diff.options[songMenu.selectedIndex];
+
+      //       // Check if the selected option is "Farewell"
+      //       if (selectedOption.value === 'hard') {
+      //           // Change the value of the variable N to 30
+      //           var N = 30;
+      //           init();
+      //           // console.log('N has been set to 30 because Farewell is selected.');
+      //       }
+      //   });
       init();
+
+      var diffMenu= document.getElementById('diffMenu');
+      var valueOfNElement = document.getElementById('valueOfN');
+
+        // Add an event listener to the select element
+        diffMenu.addEventListener('change', function() {
+            // Get the selected option
+            var selectedOption = diffMenu.options[diffMenu.selectedIndex];
+
+            // Check if the selected option is "Farewell"
+            if (selectedOption.value === 'hard') {
+                // Change the value of the variable N to 30
+                cars.push(new Car(30, ASSETS.IMAGE.CAR, LANE.A));
+                cars.push(new Car(25, ASSETS.IMAGE.CAR, LANE.B));
+                cars.push(new Car(15, ASSETS.IMAGE.CAR, LANE.A));
+                
+                // console.log('N has been set to 30 because Farewell is selected.');
+            }
+
+            if (selectedOption.value === 'normal') {
+                // Change the value of the variable N to 30
+                N = 70;
+                cars.splice(cars.length - 3, 3);
+
+                
+                // console.log('N has been set to 30 because Farewell is selected.');
+            }
+
+            
+            // valueOfNElement.textContent = 'The value of N is: ' + cars.length;
+        });
+
+        init();
       //# sourceURL=pen.js
     </script>
     <script src="javascript/null.js"></script>
@@ -1109,5 +1174,6 @@
         <li><a href="#">Item 3</a></li>
     </ul>
     <script src="javascript/menuscript.js"></script> -->
+    
   </body>
 </html>
