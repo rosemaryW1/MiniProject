@@ -47,6 +47,32 @@
         <span><span>&lt;</span><span>&gt;</span>move</span>
         <span><span>&lt;</span><span>&gt;</span>accelerate</span>
     </div>
+    <div id="div1">
+        <div id="div2">
+            <label id="labelsong">Change song</label>
+            <select id="songMenu">
+                <option value="bgmusic/Farewell.mp3">Farewell</option>
+                <option value="bgmusic/Summit.mp3">Summit</option>
+                <option value="bgmusic/stomping-rock-four-shots-111444.mp3">Stomping Rock</option>
+                <option value="bgmusic/trailer-sport-stylish-16073.mp3">Trailer sport</option>
+                <!-- Add more songs as needed -->
+            </select>
+
+        </div>
+
+        <div id="div3">
+            <label id="labelLevel">Choose Level</label>
+            <select id="diffMenu">
+                <option value="normal">Normal</option>
+                <option value="hard">Hard</option>
+            </select>
+        </div>
+    </div>
+
+    <audio autoplay id="myAudio">
+        <source id="audioSource" src="bgmusic/Farewell.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
 
     <script src="javascript/1.js"></script>
     <script id="rendered-js">
@@ -54,7 +80,7 @@
             COLOR: {
                 TAR: ["#000000", "#000000"],
                 RUMBLE: ["#FFFFFF", "#FFFFFF"],
-                GRASS: ["#FFFFFF", "#F6f6f6"],
+                GRASS: ["#002A62", "#002A62"],
             },
             IMAGE: {
                 TREE: {
