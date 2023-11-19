@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbie</title>
+    <link rel="icon" href="images/1icon.png" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press+Start+2P" />
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<script>window.console = window.console ||
+        function (t) { }</script>
+
+<script>
+    if (document.location.search.match(/type=embed/gi)) {
+        window.parent.postMessage("resize", "*");
+
+    }
+</script>
+
+<body translate="no">
+    <div id="game">
+        <div id="road">
+            <div id="cloud"></div>
+            <div id="hero"></div>
+        </div>
+
+        <div id="hud">
+            <span id="time" class="topUI">0</span>
+            <span id="score" class="topUI">0</span>
+            <span id="lap" class="topUI">0' 00"000</span>
+            <span id="tacho">0</span>
+        </div>
+        <div id="home">
+            <h1>NitroDash</h1>
+            <p id="text"></p>
+
+            <div id="highscore"></div>
+        </div>
+    </div>
+    <div id="controls">
+        <span><span>C</span>Start game</span>
+        <span><span>M</span>mute</span>
+        <span><span>&lt;</span><span>&gt;</span>move</span>
+        <span><span>&lt;</span><span>&gt;</span>accelerate</span>
+    </div>
+
+    <script src="javascript/1.js"></script>
+    <script id="rendered-js">
+        const ASSETS = {
+            COLOR: {
+                TAR: ["#000000", "#000000"],
+                RUMBLE: ["#FFFFFF", "#FFFFFF"],
+                GRASS: ["#FFFFFF", "#F6f6f6"],
+            },
+            IMAGE: {
+                TREE: {
+                    src: "images/treepinklevel.png",
+                    width: 132,
+                    height: 192,
+                },
+                HERO: {
+                    src: "images/hero.png",
+                    width: 110,
+                    height: 56,
+                },
+                CAR: {
+                    src: "images/car03.png",
+                    width: 50,
+                    height: 40,
+                },
+                FINISH: {
+                    src: "images/finish.png",
+                    width: 339,
+                    height: 180,
+                    offset: -0.5,
+                },
+                SKY: {
+                    src: "images/bgpinklevel.png"
+                }
+            },
+            AUDIO: {
+                theme:
+                    "Farewell.mp3",
+                engine:
+                    "https://s3-us-west-2.amazonaws.com/s.cdpn.io/155629/engine.wav",
+                honk: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/155629/honk.wav",
+                beep: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/155629/beep.wav",
+            },
+
+        };
+    </script>
+    <script src="javascript/racetrack.js"></script>
+    <script src="javascript/null.js"></script>
+    <script src="javascript/audiochange.js"></script>
+
+</body>
+
+</html>
