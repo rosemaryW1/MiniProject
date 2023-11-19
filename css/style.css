@@ -202,6 +202,22 @@ h1 {
     margin-left: 270px;
 }
 
+#div2 {
+    display: inline-block;
+     margin-right: 20px;
+}
+#labelsong{
+    font-size: 16px;
+     color: #7dd8c9;
+}
+#div3{
+    display: inline-block;
+
+}
+#labelLevel{
+    font-size: 16px; 
+    color: #7dd8c9;
+}
 #songMenu {
     border: 2px solid #868686;
     border-radius: 10px;
@@ -212,4 +228,15 @@ h1 {
     font-size: 16px;
     color: #7dd8c9;
     background-color: #ffffff;
+}
+#diffMenu{
+    border: 2px solid #868686;
+     border-radius: 10px;
+      padding: 5px; 
+      margin-right: 10px; 
+      display: inline-block; 
+      font-family: 'Arial', sans-serif; 
+      font-size: 16px; 
+      color: #7dd8c9; 
+      background-color: #ffffff;
 }
