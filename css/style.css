@@ -196,3 +196,20 @@ h1 {
 #controls>span:last-child>span {
     transform: rotate(90deg);
 }
+
+#div1 {
+    margin-bottom: 140px;
+    margin-left: 270px;
+}
+
+#songMenu {
+    border: 2px solid #868686;
+    border-radius: 10px;
+    padding: 5px;
+    margin-right: 10px;
+    display: inline-block;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    color: #7dd8c9;
+    background-color: #ffffff;
+}
