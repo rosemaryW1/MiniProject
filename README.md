@@ -6,7 +6,7 @@ A WebGL Application that renders a 3D Racing car game on the web.
 On the beginning of the application one views a home page that upon action, prompts you to choose which level to play the racegame. 
 The goal of the race is to take the least time possible to complete a single lap in the game while also ensuring that time doesn't run out.
 This racegame works in the following way
-- Press C to start the game, P to play music and M to Mute
+- Press S to start the game, P to play music and M to Mute
 - Left and right arrow to change lanes, up and down to accelerate and decelerate respectively
 
 ## Features
