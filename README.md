@@ -40,3 +40,11 @@ This project is an upgrade of an already existing WebGL application that can be 
 
 [Source Code](https://github.com/KodeMeister-YT/Dash.github.io)
 
+Some additional features added to the source code are 
+
+- Multiple diverse terrains
+- Addition of  background music to the game
+- Improvements in the game physics
+- Improvement in the approach to the project (Making it more Object Oriented)
+- Diversification of dificulty level of the game
+- Integration functionalities
