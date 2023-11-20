@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+
+  <p id="valueOfN"></p>
+
+  <title>Desert</title>
+  <link rel="icon" href="images/icon.png">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press+Start+2P" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script>
+    window.console = window.console || function (t) { };
+  </script>
+  <script>
+    if (document.location.search.match(/type=embed/gi)) {
+      window.parent.postMessage("resize", "*");
+    }
+  </script>
+</head>
+
+<body translate="no">
+  <p id="valueOfN"></p>
+  <div id="game">
+    <div id="road">
+      <div id="cloud"></div>
+      <div id="hero"></div>
+    </div>
+
+    <div id="hud">
+      <span id="time" class="topUI">0</span>
+      <span id="score" class="topUI">0</span>
+      <span id="lap" class="topUI">0'00"000</span>
+      <span id="tacho">0</span>
+    </div>
+
+    <div id="home">
+      <h1>Nitro Dash</h1>
+      <p id="text"></p>
+      <p id="valueOfN"></p>
+
+      <div id="highscore"></div>
+    </div>
+  </div>
+
+  <div id="controls">
+    <span><span>C</span>Start Game</span>
+    <span><span>P</span>Play/Pause Music</span>
+    <span><span>M</span>Mute</span>
+    <span><span>&lt;</span><span>&gt;</span>Turn</span>
+    <span><span>&lt;</span><span>&gt;</span>Accelerate</span>
+
+  </div>
+
+  <div id="div1">
+    <div style="display: inline-block; margin-right: 20px;">
+      <label style="font-size: 16px; color: #7dd8c9;">Change song</label>
+      <select id="songMenu" style="">
+        <option value="bgmusic/Farewell.mp3">Farewell</option>
+        <option value="bgmusic/Summit.mp3">Summit</option>
+        <option value="bgmusic/Mermaid.mp3">Mermaid</option>
+        <option value="bgmusic/dark-country-rock-138300.mp3">Country</option>
+        <option value="bgmusic/stomping-rock-four-shots-111444.mp3">Stomping Rock</option>
+        <option value="bgmusic/trailer-sport-stylish-16073.mp3">Trailer sport</option>
+        <option value="bgmusic/Aqua_-_Barbie_Girl_[NaijaGreen.Com]_.mp3">Barbie World</option>
+        <option value="bgmusic/joyful-jingle-173919.mp3">Christmas Jingle</option>
+        
+        <!-- Add more songs as needed -->
+      </select>
+
+    </div>
+
+
+    <div style="display: inline-block;">
+      <label style="font-size: 16px; color: #7dd8c9;">Choose Level</label>
+      <select id="diffMenu"
+        style="border: 2px solid #868686; border-radius: 10px; padding: 5px; margin-right: 10px; display: inline-block; font-family: 'Arial', sans-serif; font-size: 16px; color: #7dd8c9; background-color: #ffffff;">
+        <option value="normal">Normal</option>
+        <option value="hard">Hard</option>
+      </select>
+    </div>
+  </div>
+
+
+
+  <audio autoplay id="myAudio">
+    <source id="audioSource" src="bgmusic/Farewell.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+  <!-- <audio autoplay controls id="myAudio">
+      <source src="bgmusic/Farewell.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    // Function to start audio playback
+    function startPlayback() {
+        let audioElement = document.getElementById('myAudio');
+        
+        // Check if the audio is paused, if so, play it
+        if (audioElement.paused) {
+            audioElement.play();
+        }
+        else if (audioElement.play){
+          audioElement.pause()
+        }
+    }
+
+    // Add keydown event listener to the document
+    document.addEventListener('keydown', function(event) {
+        // Check if any key is pressed, you can modify this condition to check for a specific key if needed
+        if (event.key ==='p') {
+            startPlayback();
+        }
+    });
+</script> -->
+  <script src="javascript/1.js"></script>
+
+  <script id="rendered-js">
+
+    let ASSETS = {
+      COLOR: {
+          TAR: ["#a77d56", "#8f6e58"],  // Sandy road color
+          RUMBLE: ["#a77d56", "#d1ba9c"],  // Color for the road's edge
+          GRASS: ["#ffd699", "#e6ccad"],  // Desert sand color
+         },
+
+      IMAGE: {
+        TREE: {
+          src: "images/cactus.png",
+          width: 132,
+          height: 192,
+        },
+
+        HERO: {
+          src: "images/hero.png",
+          width: 110,
+          height: 56,
+        },
+
+        CAR: {
+          src: "images/car03.png",
+          width: 50,
+          height: 40,
+        },
+
+        FINISH: {
+          src: "images/finish.png",
+          width: 339,
+          height: 180,
+          offset: -0.5,
+        },
+
+        SKY: {
+          src: "images/sunny.png",
+        },
+      },
+
+      AUDIO: {
+        theme:
+          "Farewell.mp3",
+        engine:
+          "https://s3-us-west-2.amazonaws.com/s.cdpn.io/155629/engine.wav",
+        honk: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/155629/honk.wav",
+        beep: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/155629/beep.wav",
+      },
+    };
+  </script>
+  <script src="javascript/racetrack.js"></script>
+  <script src="javascript/null.js"></script>
+  <script src="javascript/audiochange.js"></script>
+  <!-- <button id="toggleMenu">Toggle Menu</button>
+    <ul id="menu" class="hidden">
+        <li><a href="#">Item 1</a></li>
+        <li><a href="#">Item 2</a></li>
+        <li><a href="#">Item 3</a></li>
+    </ul>
+    <script src="javascript/menuscript.js"></script> -->
+
+</body>
+
+</html>
