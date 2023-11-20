@@ -305,7 +305,7 @@ addEventListener(`keyup`, function (e) {
         return;
     }
 
-    if (e.code === "KeyC") {
+    if (e.code === "KeyS") {
         e.preventDefault();
 
         if (inGame) return;
