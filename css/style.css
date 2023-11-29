@@ -240,3 +240,41 @@ h1 {
       color: #7dd8c9; 
       background-color: #ffffff;
 }
+.arrow-button {
+    background-color: #7dd8c9; /* Green background color */
+    color: white; /* White text color */
+    border: none; /* Remove border */
+    padding: 15px 20px; /* Add padding */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline */
+    font-size: 16px; /* Set font size */
+    cursor: pointer; /* Add cursor pointer */
+    position: fixed; /* Fixed position so that it stays in place when scrolling */
+    bottom: 20px; /* Adjust the distance from the bottom */
+}
+
+.arrow-button.left::after {
+    content: " \2190"; /* Unicode left arrow character */
+}
+
+.arrow-button.right::after {
+    content: " \2192"; /* Unicode right arrow character */
+}
+
+.arrow-button.left {
+    left: 20px; /* Adjust the distance from the left */
+}
+
+.arrow-button.right {
+    right: 20px; /* Adjust the distance from the right */
+}
+.label1 {
+    color: #ffff; /* Dark text color */
+    font-size: 14px; /* Set font size */
+    margin-top: 5px; /* Add margin for spacing */
+}
+.label2 {
+    color: #fff; /* Dark text color */
+    font-size: 14px; /* Set font size */
+    margin-top: 5px; /* Add margin for spacing */
+}
