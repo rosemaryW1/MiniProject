@@ -67,16 +67,35 @@
         <option value="bgmusic/joyful-jingle-173919.mp3">Christmas Jingle</option>
         <!-- Add more songs as needed -->
       </select>
-
-    </div>
-
-
+      
     <div id="div3">
       <label id="labelLevel">Choose Level</label>
       <select id="diffMenu">
         <option value="normal">Normal</option>
         <option value="hard">Hard</option>
       </select>
+      
+
+    </div>
+       
+   <div class="arrow-button-container">
+    <!-- Button to navigate to the next page -->
+  
+    <button class="arrow-button left" onclick="changePage('next')"></button>
+  
+</div>
+
+<div class="arrow-button-container">
+    <!-- Button to navigate to the previous page -->
+    <button class="arrow-button right" onclick="changePage('previous')"></button>
+   
+</div>
+    
+
+
+    
+
+
     </div>
   </div>
 
@@ -176,6 +195,18 @@
     </ul>
     <script src="javascript/menuscript.js"></script> -->
 
+    <script>
+      function changePage(direction) {
+          if (direction === 'next') {
+              // Redirect to the next page
+              window.location.href = "homepage.html";
+          } else if (direction === 'previous') {
+              // Redirect to the previous page
+              window.location.href = "citylevel.html";
+          }
+          // You can add more conditions based on your page structure and navigation needs
+      }
+  </script>
 </body>
 
 </html>

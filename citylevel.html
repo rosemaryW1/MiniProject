@@ -71,7 +71,29 @@
                 <option value="hard">Hard</option>
             </select>
         </div>
-    </div>
+    
+
+    <div id="div4">
+        
+    </select>
+
+    
+   
+   <div class="arrow-button-container">
+    <!-- Button to navigate to the next page -->
+    <button class="arrow-button left" onclick="changePage('next')"></button>
+    
+</div>
+
+<div class="arrow-button-container">
+    <!-- Button to navigate to the previous page -->
+    <button class="arrow-button right" onclick="changePage('previous')"></button>
+    
+</div>
+    
+</div>
+</div>
+
 
     <audio autoplay id="myAudio">
         <source id="audioSource" src="bgmusic/Farewell.mp3" type="audio/mp3">
@@ -125,7 +147,20 @@
     <script src="javascript/racetrack.js"></script>
     <script src="javascript/null.js"></script>
     <script src="javascript/audiochange.js"></script>
-
+   
+        <script>
+    function changePage(direction) {
+        if (direction === 'next') {
+            // Redirect to the next page
+            window.location.href = "darklevel.html";
+        } else if (direction === 'previous') {
+            // Redirect to the previous page
+            window.location.href = "pinklevel.html";
+        }
+        // You can add more conditions based on your page structure and navigation needs
+    }
+</script>
+    </script>
 </body>
 
 </html>

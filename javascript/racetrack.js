@@ -264,7 +264,8 @@ function genMap() {
         else if (Math.random() > 0.8)
             Object.assign(section, {
                 curve: (_) => 0,
-                height: (i) => Math.sin(i / randInterval) * 1000,
+                // height: (i) => Math.sin(i / randInterval) * 1000,
+                height: (_) => 0,
             });
         else if (Math.random() > 0.8)
             Object.assign(section, {
@@ -458,7 +459,7 @@ if (use && lines[endPos].y !== 0) {
         const offsetRatio = 5;
         if (
             (car.pos | 0) === startPos &&
-            isCollide(playerX * offsetRatio + LANE.B, 0.2, car.lane, 0.2)
+            isCollide(playerX * offsetRatio + LANE.B, 0.4, car.lane, 0.4)
         ) {
             speed = Math.min(hitSpeed, speed);
             if (inGame) audio.play("honk");
