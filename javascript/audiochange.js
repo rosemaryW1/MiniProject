@@ -22,7 +22,7 @@ function updateAudioSource() {
     let audioElement = document.getElementById('myAudio');
     audioElement.load();
 
-    audioElement.volume = 0.1;
+    audioElement.volume = 0.2;
 
     // Start playback if it was playing before changing the song
     if (!audioElement.paused) {

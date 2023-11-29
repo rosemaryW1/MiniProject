@@ -399,7 +399,7 @@ function update(step) {
     // Check if the current road section is bumpy
 if (use && lines[endPos].y !== 0) {
     // Reduce speed when hitting a bump
-    speed = accelerate(speed, -20, step); // You can adjust the value -20 to control the amount of speed reduction
+    speed = accelerate(speed, -30, step); // You can adjust the value -20 to control the amount of speed reduction
 }
 
     if (current.to <= scoreVal) {
