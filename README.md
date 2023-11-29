@@ -31,7 +31,12 @@ In order to have this project working on one's end, follow these steps:
 
 Use the link below to clone the repository:
 
-[Click Here](https://github.com/muthoni856/MiniProject.git) 
+```
+git clone https://github.com/muthoni856/MiniProject.git
+
+ ```
+
+
 
 
 ## Relevant Sources
